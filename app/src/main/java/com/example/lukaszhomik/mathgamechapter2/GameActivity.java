@@ -25,6 +25,7 @@ public class GameActivity extends Activity implements View.OnClickListener{
     int answer;
     int currentScore = 0;
     int currentLevel = 1;
+    int currentError = 0;
     int levelMultiplier = 5;
     Random random = new Random();;
 
@@ -42,7 +43,6 @@ public class GameActivity extends Activity implements View.OnClickListener{
         btnAnswer1.setOnClickListener(this);
         btnAnswer2.setOnClickListener(this);
         btnAnswer3.setOnClickListener(this);
-
 
     }
 
@@ -66,12 +66,12 @@ public class GameActivity extends Activity implements View.OnClickListener{
 
     }
     void setQuestion(){
-//Assigning texts
+//Initialize operation and operators
         operator1 = generateOperation.generateOperator(currentLevel * levelMultiplier);
         operator2 = generateOperation.generateOperator(currentLevel * levelMultiplier);
-
         sign = generateOperation.generateSign();
 
+//Initialize sign
         switch (sign){
             case "+":
                 answer = Calculator.add(operator1,operator2);
@@ -83,7 +83,7 @@ public class GameActivity extends Activity implements View.OnClickListener{
                 answer = Calculator.substract(operator1,operator2);
                 break;
         }
-
+//Initialize Text and button variables
         txtOperator1 = (TextView)findViewById(R.id.txtOperator1);
         txtOperator2 = (TextView)findViewById(R.id.txtOperator2);
         txtOperation = (TextView)findViewById(R.id.txtOperation);
@@ -95,11 +95,12 @@ public class GameActivity extends Activity implements View.OnClickListener{
         txtLevel = (TextView)findViewById(R.id.txtLevelResult);
         txtScore = (TextView)findViewById(R.id.txtScoreResult);
 
+//Set TextView and buttons text
         txtOperator1.setText("" + operator1);
         txtOperator2.setText("" + operator2);
         txtOperation.setText(sign);
 
-        //Button random positioning
+//Button random positioning
         int buttonLayout = random.nextInt(3);
         switch (buttonLayout){
             case 0:
@@ -129,6 +130,7 @@ public class GameActivity extends Activity implements View.OnClickListener{
         else{
             currentScore = 0;
             currentLevel = 1;
+            currentError = currentError + 1;
         }
 
         txtScore.setText("" + currentScore);
