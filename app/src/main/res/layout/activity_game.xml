@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lukaszhomik.mathgamechapter2.GameActivity">
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:id="@+id/txtOperator1"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="*"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtOperator1"
+        android:layout_toRightOf="@+id/txtOperator1"
+        android:layout_toEndOf="@+id/txtOperator1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/txtOperation"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtOperation"
+        android:layout_toRightOf="@+id/txtOperation"
+        android:layout_toEndOf="@+id/txtOperation"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:id="@+id/txtOperator2"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="="
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOperator1"
+        android:layout_alignLeft="@+id/txtOperator1"
+        android:layout_alignStart="@+id/txtOperator1"
+        android:layout_marginTop="16dp"
+        android:id="@+id/txtIsEqual"
+        android:textSize="30sp" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAnswer2"
+        android:layout_alignBaseline="@+id/btnAnswer1"
+        android:layout_alignBottom="@+id/btnAnswer1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="79dp"
+        android:id="@+id/btnAnswer1"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/txtIsEqual"
+        android:layout_toEndOf="@+id/txtIsEqual" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAnswer3"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_alignBaseline="@+id/btnAnswer2"
+        android:layout_alignBottom="@+id/btnAnswer2"
+        android:layout_toRightOf="@+id/btnAnswer2"
+        android:layout_toEndOf="@+id/btnAnswer2" />
+
+
+    <TextView
+        android:text="Level:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtScore"
+        android:layout_alignLeft="@+id/txtScore"
+        android:layout_alignStart="@+id/txtScore"
+        android:layout_marginTop="22dp"
+        android:id="@+id/txtLevel" />
+
+    <TextView
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtLevel"
+        android:layout_toRightOf="@+id/txtScore"
+        android:layout_toEndOf="@+id/txtScore"
+        android:id="@+id/txtLevelResult" />
+
+    <TextView
+        android:text="Score: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/txtScore"
+        android:layout_above="@+id/btnAnswer1"
+        android:layout_alignLeft="@+id/btnAnswer1"
+        android:layout_alignStart="@+id/btnAnswer1"
+        android:layout_marginBottom="91dp"/>
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtScore"
+        android:layout_toRightOf="@+id/txtScore"
+        android:layout_toEndOf="@+id/txtScore"
+        android:id="@+id/txtScoreResult" />
+
+</RelativeLayout>
